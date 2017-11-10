@@ -17,12 +17,12 @@
 
 # 组件
 
-## 电影主页及分页
-## 影院主页及分页
-## viedo组件
-## city组件
-## swiper组件
-## loading组件
+    电影主页及分页
+    影院主页及分页
+    viedo组件
+    city组件
+    swiper组件
+    loading组件
 
 # 构建
 
