@@ -1,0 +1,66 @@
+<!--pages/home/will/will.wxml-->
+<view class="content">
+<view class="btn-area">
+  <navigator class="city" 
+  url="../city/city"
+  open-type="switchTab">
+    <image class="logo" style="" mode="{{item.mode}}" src="../../../images/logo.png"></image>
+    <view class="city-name">北京</view>
+    <view class="city-add"></view>
+  </navigator>
+  <navigator url="../../index/index"
+  open-type="switchTab"
+  hover-class="none">正在热映</navigator>
+  <navigator class="nav-hot" 
+  url="../will/will"
+  open-type="switchTab"
+  hover-class="none">即将上映</navigator>
+</view>
+
+<view class="movielist-wrapper">
+  <view class="movie-list" wx:for="{{movie}}">
+    <view class="movie-item">
+      <view class="movie-info">
+        <!--<view class=""></view>-->
+        <image src="{{item.preview[0].coverUrl}}"
+        class="picture" 
+        hover-class="none">
+          <image class="play-icon"
+          src="../../../images/player.png"></image>
+        </image>
+        <navigator class="movie-item-content"
+        hover-class="none">
+          <view class="title">
+            <span class="show-name">{{item.showName}}</span>
+            <view class="movie-type type-3DIMAX"></view>
+          </view>
+          <view class="beief">
+            <view class="film-star">
+              <view class="show-star-mod">
+                <view class="show-star-ranking">
+                  <view class="show-star-raning-light"></view>
+                </view>
+                <view class="show-star-remark">{{item.remark}}</view>
+              </view>
+            </view>
+          </view>
+          <view class="beief">导演：{{item.director}}</view>
+          <view class="beief">主演：{{item.leadingRole}}</view>
+        </navigator>
+        <navigator class="button"
+        hover-class="none">购票</navigator>
+      </view>
+      <view class="movie-activity">
+          <navigator class="movie-activity-preference"
+          hover-class="none">
+          <view class="content">
+            <span class="orange">特惠</span>
+            <span class="gap">|</span>
+            {{item.highlight}}
+          </view>
+          </navigator>
+        </view>
+    </view>
+  </view>
+</view>
+</view>

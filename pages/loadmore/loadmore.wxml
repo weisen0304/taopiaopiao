@@ -1,0 +1,9 @@
+<template name="loadmore">
+  <view class="content">
+    <text>点击查看更多</text>
+    <view class="loading-icon">
+      <text>加载中</text>
+    </view>
+  </view>
+  <text>已经全部显示</text>
+</template>

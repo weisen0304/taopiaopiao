@@ -1,0 +1,27 @@
+<view class="concent">
+    <view class="con_item">
+      <view class="item_img">
+        <image src="{{userInfo.avatarUrl}}"></image>
+      </view>
+      <view class="item_txt">
+        <view class="item_id">名片</view>
+        <view class="item_iphone">电话</view>
+      </view>
+      <button class="item_btn">编辑</button>
+    </view>
+    <view class="con_item1">
+      <view class="item_img1"></view>
+      <view class="item_txt1">相册</view>
+      <view class="item_line"></view>
+      <view class="item_img2"></view>
+    </view>
+    <view class="con_item1">
+      <view class="item_img1"></view>
+      <view class="item_txt1">足迹</view>
+      <view class="item_line"></view>
+    </view>
+    <view class="con_item">
+      <view class="item_img"></view>
+      <view class="item_txt1">关于校享吧</view>
+    </view>
+</view>

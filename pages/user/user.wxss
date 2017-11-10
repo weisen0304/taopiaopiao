@@ -1,0 +1,85 @@
+.concent{
+    margin: 0px;
+    padding: 0px;
+    border: solid 1px #FFE1FF;
+    width: 99%;
+    height: 800px;
+    background: #EEE9E9;
+}
+image{
+    background:fixed center center no-repeat;
+    background-size: cover;
+    width: 100%;
+}
+.con_item{
+    width: 90%;
+    height: 50px;
+    background: #FFFFFF;
+    border: solid 1px #FFE1FF;
+    margin:5px auto;
+}
+.con_item1{
+    width: 90%;
+    height: 100px;
+    background: #FFFFFF;
+    border: solid 1px #FFE1FF;
+    margin:5px auto;
+}
+.item_line{
+    width: 80%;
+    height: 1px;
+    margin:50px auto;
+    padding:0px;
+    overflow:hidden;
+    background: #FFE1FF;
+}
+.item_img{
+    width: 30px;
+    height: 30px;
+    margin: 10px;
+    overflow: hidden;
+    border: solid 1px #FFE1FF;
+    float: left;
+}
+.item_img1{
+    width: 30px;
+    height: 30px;
+    margin: 5px;
+    border: solid 1px #FFE1FF;
+    float: left;
+    background: cornflowerblue;
+}
+.item_txt{
+    width: 50%;
+    height: 50px;
+    float: left;
+    font-size: 14px;
+} 
+.item_txt1{
+    line-height: 60px;
+    margin-left: 10px;
+    width: 50%;
+    height: 50px;
+    float: left;
+    font-size: 14px;
+} 
+.item_txt text{
+    margin: 10px auto;
+    line-height: 20px;
+    width: 80%;
+    height: 24px;
+}
+.item_btn{
+    margin: 10px;
+    width: 60px;
+    height: 30px;
+    right: 0px;
+    font-size: 10px;
+    float: right;
+}
+.item_id{
+    margin: 4px;
+}
+.item_iphone{
+    margin: 4px;
+}

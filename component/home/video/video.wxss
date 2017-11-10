@@ -1,0 +1,53 @@
+/* pages/video/video.wxss */
+.video-box {
+    position: fixed;
+	width: 100%;
+	height: 200px;
+	top: 20%;
+	padding: 0 20px;
+	box-sizing: border-box;
+    z-index: 50;
+}
+.v-cover {
+	height: 100%;
+	background-color: #000;
+	background-repeat: no-repeat;
+	background-size: auto 100%;
+	background-position: center;
+}
+.v-icon {
+	width: 90px;
+	height: 90px;
+	left: 50%;
+	top: 50%;
+	margin-left: -45px;
+	margin-top: -45px;
+	/*background: url('../assets/images/sprite.png') -2px -2px no-repeat;*/
+}
+.v-content {
+	width: 100%;
+	height: 100%;
+}
+
+.controls {
+  position: relative;
+  top: 50%;
+  height: 50px;
+  margin-top: -25px;
+  display: flex;
+}
+.play,.pause,.time {
+  flex: 1;
+  height: 100%;
+}
+.time {
+  text-align: center;
+  background-color: rgba(0, 0, 0, .5);
+  color: white;
+  line-height: 50px;
+}
+.img {
+  width: 40px;
+  height: 40px;
+  margin: 5px auto;
+}

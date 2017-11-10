@@ -1,0 +1,6 @@
+<!-- <template name="MovieDetail"> -->
+  <view class="actions-wrap">
+    <navigator class="dy-button">选座购票</navigator>
+  </view>
+  <navigator class="gotop">返回顶部</navigator>
+<!-- </template> -->

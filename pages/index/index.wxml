@@ -1,0 +1,210 @@
+<import src="../../component/login/login.wxml" />
+<import src="../../component/home/city/city.wxml" />
+<import src="../../component/home/video/video.wxml" />
+<import src="../../component/home/swiper/swiper.wxml" />
+<import src="../../component/home/hot/hot.wxml" />
+<import src="../../component/home/coming/coming.wxml" />
+<import src="../loading/loading" />
+
+<!-- loading组件 -->
+<!-- <view>
+  <template is="loading" data="{{...__lgpanel__}}">
+  </template>
+  <view style="color: #fff;" bindtap="closeCity">×</view>
+</view> -->
+<view hidden="{{!loading}}" class="ui-icon-loading page-loading">
+  <i class="loading-iocn loading-progress-1"></i>
+</view>
+
+<!--登录组件-->
+<!--<view wx:if="{{showCity == true}}" class="login">
+  <template is="login" data="{{...__lgpanel__}}"></template>
+  <button type="default" plain bindtap="login">登录 </button>
+</view>-->
+
+<!--选择城市组件-->
+<!-- <view wx:if="{{showCity == true}}">
+  <template is="city" data="{{...__lgpanel__}}">
+  </template>
+  <view style="color: #fff;" bindtap="closeCity">×</view>
+</view> -->
+<view wx:if="{{showCity}}" class="city-wrap top-in">
+  <view class="city-title">选择城市
+    <view class="close" bindtap="closeCity">×</view>
+  </view>
+  <scroll-view scroll-y bindscroll="scroll" class="city-list">
+    <view class="city-category" wx:for="{{city}}" wx:for-index="idx" wx:for-item="itemName" wx:key="unique" id="{{idx}}">
+      <view id="{{idx}}">{{idx}}</view>
+      <ul>
+        <li wx:for="{{itemName}}">
+          <navigator url="index" open-type="switchTab" bindtap="chooseCity" id="{{item.regionName}}">{{item.regionName}}</navigator>
+        </li>
+      </ul>
+    </view>
+  </scroll-view>
+  <view class="city-index left-in">
+    <ul>
+      <li wx:for="{{city}}" wx:for-index="idx" wx:for-item="itemName" wx:key="unique">
+        <navigator url="index" open-type="switchTab" bindtap="chooseIndex" id="{{idx}}">{{idx}}</navigator>
+      </li>
+    </ul>
+  </view>
+</view>
+
+<!--视频组件-->
+<view class="closeVideo" id="mask" bindtap="closeVideo" hidden="{{showVideo == false}}">
+  <!-- <template is="video" data="{{...__lgpanel__}}">
+  </template> -->
+  <view class="video-box">
+    <view class="v-cover">
+      <video class="v-content" id="myVideo" src="http://wxsnsdy.tc.qq.com/105/20210/snsdyvideodownload?filekey=30280201010421301f0201690402534804102ca905ce620b1241b726bc41dcff44e00204012882540400&bizid=1023&hy=SH&fileparam=302c020101042530230204136ffd93020457e3c4ff02024ef202031e8d7f02030f42400204045a320a0201000400"
+        controls="{{true}}" event-model="bubble">
+      </video>
+    </view>
+  </view>
+  <view >×</view>
+</view>
+
+<!--body栏-->
+<view wx:if="{{!showCity}}" hidden="{{!selnav}}" class="content">
+
+  <!--导航栏-->
+  <view class="btn-area">
+    <view class="city" bindtap="cityBtn" hover-class="none">
+      <image class="logo" style="" mode="{{item.mode}}" src="../../images/logo.png"></image>
+      <view class="city-name">{{cityName}}</view>
+      <view class="city-add"></view>
+    </view>
+    <view class="navbar">
+      <text wx:for="{{navbar}}" data-idx="{{index}}" class="item {{currentTab==index ? 'active' : ''}}" wx:key="unique" bindtap="navbarTap">{{item}}</text>
+    </view>
+  </view>
+
+  <!--内容栏-->
+  <view hidden="{{currentTab!==0}}">
+    <!--轮播图组件-->
+    <swiper class="swiper" indicator-dots="{{indicatorDots}}" autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}" circular="{{circular}}">
+      <block class="swiper-block" wx:key wx:for="{{imgs}}">
+        <swiper-item class="swiper-item">
+          <image src="https://gw.alicdn.com/tfs/{{item.smallPicUrl}}" class="slide-image" />
+        </swiper-item>
+      </block>
+    </swiper>
+    <!-- 正在热映 -->
+    <!-- <template is="hot" data="{{...__lgpanel__}}">
+    </template> -->
+    <view class="movielist-wrapper">
+      <view class="movie-list" wx:for="{{movie}}">
+        <view class="movie-item">
+          <view class="movie-info">
+            <view class="picture" style="background-image: url('{{item.preview[0].coverUrl}}')" bindtap="VideoBtn" hover-class="none">
+              <image class="play-icon" src="../../images/player.png"></image>
+            </view>
+
+            <!-- <view class="closeVideo" wx:if="{{showVideo}}">
+              <view class="pauseBtn" bindtap="pause">×</view>
+              <view class="v-cover">
+                <video class="v-content" id="myVideo" src="{{item.preview[0].iphoneUrl}}" controls="{{true}}" event-model="bubble" hidden="{{showVideo}}">
+                </video>
+              </view>
+            </view> -->
+            <navigator url="../home/MovieDetail/MovieDetail" class="movie-item-content" hover-class="none">
+              <view class="title">
+                <span class="show-name">{{item.showName}}</span>
+                <view class="movie-type type-3DIMAX" wx:if="{{item.showMark == 'IMAX3D'}}"></view>
+                <view class="movie-type type-IMAX" wx:if="{{item.showMark == 'IMAX'}}"></view>
+                <view class="movie-type type-3D" wx:if="{{item.showMark == '3D'}}"></view>
+              </view>
+              <view class="beief">
+                <view class="film-star">
+                  <view class="show-star-mod">
+                    <view class="show-star-ranking">
+                      <view class="show-star-raning-light" style="width: {{item.remark * 10}}%"></view>
+                    </view>
+                    <view class="show-star-remark">{{item.remark}}</view>
+                  </view>
+                </view>
+              </view>
+              <view class="beief">导演：{{item.director}}</view>
+              <view class="beief">主演：{{item.leadingRole}}</view>
+            </navigator>
+            <navigator wx:if="{{item.openTime<'2016-12-09'}}" class="buy-btn" hover-class="none">购票</navigator>
+            <navigator wx:else="{{item.openTime>='2016-12-09'}}" class="forward-buy-btn" hover-class="none">预售</navigator>
+          </view>
+          <view class="movie-activity">
+            <navigator class="movie-activity-preference" hover-class="none">
+              <view class="content">
+                <span class="orange">特惠</span>
+                <span class="gap">|</span>
+                {{item.highlight}}
+              </view>
+            </navigator>
+          </view>
+        </view>
+      </view>
+    </view>
+  </view>
+
+  <view hidden="{{currentTab!==1}}">
+    <!-- 即将上映 -->
+    <template is="coming" data="{{...__lgpanel__}}">
+    </template>
+  </view>
+
+</view>
+
+<!-- 加载栏 -->
+<view class="content" hidden="{{!selnav}}">
+  <view class="movie-list" wx:for="{{movie}}">
+    <view class="movie-item">
+      <view class="movie-info">
+        <view class="picture" style="background-image: url('{{item.preview[0].coverUrl}}')" bindtap="VideoBtn" hover-class="none">
+          <image class="play-icon" src="../../images/player.png"></image>
+        </view>
+
+        <!-- <view class="closeVideo" wx:if="{{showVideo}}">
+              <view class="pauseBtn" bindtap="pause">×</view>
+              <view class="v-cover">
+                <video class="v-content" id="myVideo" src="{{item.preview[0].iphoneUrl}}" controls="{{true}}" event-model="bubble" hidden="{{showVideo}}">
+                </video>
+              </view>
+            </view> -->
+        <navigator class="movie-item-content" hover-class="none">
+          <view class="title">
+            <span class="show-name">{{item.showName}}</span>
+            <view class="movie-type type-3DIMAX"></view>
+          </view>
+          <view class="beief">
+            <view class="film-star">
+              <view class="show-star-mod">
+                <view class="show-star-ranking">
+                  <view class="show-star-raning-light"></view>
+                </view>
+                <view class="show-star-remark">{{item.remark}}</view>
+              </view>
+            </view>
+          </view>
+          <view class="beief">导演：{{item.director}}</view>
+          <view class="beief">主演：{{item.leadingRole}}</view>
+        </navigator>
+        <navigator class="button" hover-class="none">购票</navigator>
+      </view>
+      <view class="movie-activity">
+        <navigator class="movie-activity-preference" hover-class="none">
+          <view class="content">
+            <span class="orange">特惠</span>
+            <span class="gap">|</span>
+            {{item.highlight}}
+          </view>
+        </navigator>
+      </view>
+    </view>
+  </view>
+  <view class="click-load-more" bindtap="clickLoadMore">
+    <text wx:if="{{clickLoadStatus === 'start'}}">点击查看更多</text>
+    <view wx:elif="{{clickLoadStatus === 'loading'}}" class="loading-icon">
+      <text>加载中</text>
+    </view>
+    <text wx:elif="{{clickLoadStatus === 'complete'}}">已经全部显示</text>
+  </view>
+</view>

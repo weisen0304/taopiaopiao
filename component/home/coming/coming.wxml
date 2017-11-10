@@ -1,0 +1,40 @@
+<template name="coming">
+  <view class="movielist-wrapper">
+    <view class="movie-list">
+      <view class="movie-item">
+        <view class="movie-info">
+          <view class="picture" bindtap="VideoBtn" hover-class="none">
+            <image class="play-icon" src="../../images/player.png"></image>
+          </view>
+          <navigator class="movie-item-content" hover-class="none">
+            <view class="title">
+              <span class="show-name">雷神4：诸神黄昏</span>
+              <view class="movie-type type-3DIMAX"></view>
+            </view>
+            <view class="beief">
+              <view class="film-star">
+                <view class="show-star-mod">
+                  <view class="show-star-ranking">
+                    <view class="show-star-raning-light"></view>
+                  </view>
+                  <view class="show-star-remark">9.1</view>
+                </view>
+              </view>
+            </view>
+            <view class="beief">导演：塔伊加.维迪提</view>
+            <view class="beief">主演：克里斯.海姆斯沃斯</view>
+          </navigator>
+          <navigator class="button" hover-class="none">购票</navigator>
+        </view>
+        <view class="movie-activity">
+          <navigator class="movie-activity-preference" hover-class="none">
+            <view class="content">
+              <span class="orange">特惠</span>
+              <span class="gap">|</span>
+            </view>
+          </navigator>
+        </view>
+      </view>
+    </view>
+  </view>
+</template>

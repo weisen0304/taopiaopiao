@@ -1,0 +1,27 @@
+<view class="content">
+<!--// 头部-->
+  <view class="con_header">
+    <view class="con_txt">
+      <text>{{userInfo}}</text>
+      <text>{{nickName}}</text>
+      <text>{{gender}}</text>
+      <text>{{WeChat}}</text>
+    </view>
+    <view bindtap="bindViewTap" class="con_img">
+      <image src="{{userInfo.avatarUrl}}"   mode="widthFix"></image>
+    </view>
+  </view>
+
+<!--//中部-->
+   <view class="con_body">
+        <view class="main_body">
+            <view class="body_item">浏览</view>
+            <view class="body_item">赞</view>
+            <view class="body_item">收藏</view>
+        </view>
+    </view>
+
+<!--//底部-->
+    <view class="con_floor">共享信息</view>
+    
+</view>

@@ -1,0 +1,43 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/logs/logs",
+    "pages/user/user",
+    "pages/home/will/will",
+    "pages/home/MovieDetail/MovieDetail",
+    "pages/Cinema/Cinema"
+  ],
+  "window": {
+    "backgroundTextStyle": "dark",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "淘票票",
+    "navigationBarTextStyle": "black",
+    "enablePullDownRefresh": "true"
+  },
+  "tabBar": {
+    "backgroundColor": "#fff",
+    "position": "bottom",
+    "borderStyle": "white",
+    "selectedColor": "black",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "电影",
+        "iconPath": "./images/movie.png",
+        "selectedIconPath": "./images/movie1.png"
+      },
+      {
+        "pagePath": "pages/Cinema/Cinema",
+        "text": "影院",
+        "iconPath": "./images/film.png",
+        "selectedIconPath": "./images/film1.png"
+      },
+      {
+        "pagePath": "pages/user/user",
+        "text": "我的",
+        "iconPath": "./images/me1.png",
+        "selectedIconPath": "./images/me.png"
+      }
+    ]
+  }
+}

@@ -1,0 +1,5 @@
+<template name="loading">
+  <view class="ui-icon-loading page-loading">
+    <i class="loading-iocn loading-progress-1"></i>
+  </view>
+</template>

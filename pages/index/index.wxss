@@ -1,0 +1,274 @@
+/* pages/id/id.wxss */
+@import '../../component/login/login.wxss';
+@import '../../component/home/city/city.wxss';
+@import '../../component/home/video/video.wxss';
+@import '../../component/home/swiper/swiper.wxss';
+@import '../../component/home/hot/hot.wxss';
+@import '../../component/home/coming/coming.wxss';
+@import '../loading/loading.wxss';
+
+.content {
+  margin: 0;
+  padding: 0;
+  color: #333;
+  font-size: 14px;
+}
+
+.btn-area {
+  width: 100%;
+  display: flex;
+}
+
+.city {
+  flex: 60px;
+  padding: 5px;
+  height: 40px;
+  line-height: 40px;
+  text-align: center;
+}
+
+.city {
+  position: relative;
+  display: inline-block;
+}
+
+.logo {
+  position: absolute;
+  top: 15px;
+  left: 20px;
+  width: 20px;
+  height: 20px;
+  line-height: 40px;
+}
+
+.city-name {
+  position: absolute;
+  left: 60px;
+}
+
+.city-add {
+  position: absolute;
+  top: 20px;
+  left: 110px;
+  content: "";
+  display: block;
+  width: 6px;
+  height: 6px;
+  border: 1px solid #50505a;
+  border-top: 0 none;
+  border-left: 0 none;
+  margin-left: 2px;
+  -webkit-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+
+.btn-area {
+  display: flex;
+  /* flex-direction: column; */
+  height: 100%;
+}
+
+.navbar {
+  flex: auto;
+  display: flex;
+  background: #fff;
+}
+
+.navbar .item {
+  position: relative;
+  flex: auto;
+  text-align: center;
+  line-height: 50px;
+}
+
+.navbar .item.active {
+  color: #fc0;
+}
+
+.navbar .item.active:after {
+  content: "";
+  display: block;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 4rpx;
+  background: #fc0;
+}
+
+/* pages/video/video.wxss */
+
+.closeVideo {
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.1);
+  z-index: 100;
+}
+
+.pauseBtn {
+  position: absolute;
+  height: 40px;
+  font-size: 40px;
+  line-height: 40px;
+  float: right;
+  right: 5px;
+}
+
+.video-box {
+  position: fixed;
+  width: 100%;
+  height: 180px;
+  top: 30%;
+  /* padding: 0 20px; */
+  box-sizing: border-box;
+  z-index: 50;
+}
+
+.v-cover {
+  height: 100%;
+  background: rgba(0, 0, 0, 0.3);
+  background-repeat: no-repeat;
+  background-size: auto 100%;
+  background-position: center;
+}
+
+.v-content {
+  width: 100%;
+  height: 180px;
+  /* top: 20%; *//* z-index: 0; */
+}
+
+/* city.css */
+
+li {
+  display: list-item;
+  text-align: inherit;
+}
+
+.top-in {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.city-wrap {
+  position: fixed;
+  z-index: 1000;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.city-index, .city-wrap {
+  transition: all 0.2s ease-out;
+}
+
+.city-title {
+  position: absolute;
+  z-index: 1002;
+  top: 0;
+  width: 100%;
+  height: 45px;
+  border-bottom: 1px solid #e9e9e9;
+  font-size: 16px;
+  line-height: 45px;
+  text-align: center;
+  color: #000;
+  background: #fff;
+}
+
+.city-title .close {
+  position: absolute;
+  display: block;
+  top: 0;
+  right: 0;
+  width: 40px;
+  height: 40px;
+  font-size: 29px;
+  text-align: center;
+  color: #777;
+}
+
+.city-list {
+  box-sizing: border-box;
+  padding: 46px 0 0;
+  width: 100%;
+  height: 100%;
+  font-size: 12px;
+  color: #777;
+  background: #fff;
+  overflow-x: hidden;
+  overflow-y: scroll;
+}
+
+.city-list .city-category view {
+  margin: 0;
+  padding: 9px 12px;
+  font-size: 12px;
+  font-weight: bold;
+  color: #777;
+  background: #eee;
+}
+
+.city-list li a {
+  display: block;
+  border-bottom: 1px solid #e5e7e7;
+  padding: 12px;
+  font-size: 15px;
+  text-decoration: none;
+  color: #777;
+  background: #fcfcfc;
+  overflow: hidden;
+}
+
+.city-wrap .city-index.left-in {
+  opacity: 1;
+  transform: translate(0);
+}
+
+.city-wrap .city-index {
+  z-index: 1001;
+  position: fixed;
+  top: 60px;
+  right: 0;
+  width: 40px;
+  padding: 3px 0;
+  border: 1px solid #ccc;
+  background: hsla(0, 0%, 100%, 0.5);
+}
+
+.city-wrap .city-index li {
+  list-style: none;
+  float: left;
+}
+
+.city-wrap .city-index navigator {
+  display: block;
+  width: 40px;
+  height: 18px;
+  text-align: center;
+  font-size: 12px;
+  text-decoration: none;
+  color: #a9a9a9;
+}
+
+/* loadmore.css */
+
+.click-load-more {
+  height: 42px;
+  line-height: 42px;
+  text-align: center;
+  color: #333;
+  font-size: 15px;
+  background-color: #fff;
+  margin: 5px 0 8px;
+}
+
+.loading-icon span {
+  vertical-align: middle;
+}

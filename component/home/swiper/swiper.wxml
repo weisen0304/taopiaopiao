@@ -1,0 +1,16 @@
+<template name="swiper">
+    <swiper class="swiper" 
+    indicator-dots="{{indicatorDots}}"
+    autoplay="{{autoplay}}" 
+    interval="{{interval}}" 
+    duration="{{duration}}"
+    circular="{{circular}}">
+        <block class="swiper-block" 
+        wx:for="{{imgUrls}}">
+            <swiper-item class="swiper-item">
+            <image src="{{item}}" 
+            class="slide-image"/>
+            </swiper-item>
+        </block>
+    </swiper>
+</template>

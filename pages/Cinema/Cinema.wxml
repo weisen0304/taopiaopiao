@@ -1,0 +1,49 @@
+<import src="../loading/loading" />
+
+<view hidden="{{!loading}}" class="ui-icon-loading page-loading">
+  <i class="loading-iocn loading-progress-1"></i>
+</view>
+
+<view class="index-layout">
+  <view class="cinema-list-layout has-bottombar">
+    <view class="sticky-topbar fixed">
+      <view class="topbar">
+        <view class="topbar-mod">
+          <view class="city-selector j_cityBar">
+            <view class="j_cityName">上海</view>
+            <view class="selector-i-arrow"></view>
+          </view>
+          <view class="selector-btn">
+            <view class="icon-selector">筛选</view>
+          </view>
+          <view class="search-selector">
+            <view class="icon-search">搜索</view>
+          </view>
+        </view>
+      </view>
+    </view>
+
+    <view class="tab-mod">
+      <view class="cinema-list">
+        <ul class="cinema-list-ul">
+          <li class="list-item list-normal">
+            <view class="list-item-in" wx:for="{{address}}">
+              <view class="h3">
+                <span class="list-title">{{item.cinemaName}}</span>
+                <span class="list-price">{{item.availableTodayScheduleCount}}<span>元起</span>
+                </span>
+              </view>
+              <view class="list-address">
+                <view class="list-location">{{item.address}}</view>
+              </view>
+              <view class="list-status">
+                <view class="label-mod label-border-grey">退票</view>
+                <view class="label-mod label-border-grey">改签</view>
+              </view>
+            </view>
+          </li>
+        </ul>
+      </view>
+    </view>
+  </view>
+</view>

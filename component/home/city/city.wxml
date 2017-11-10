@@ -1,0 +1,170 @@
+<!--component/home/city/city.wxml-->
+<template name="city">
+    <view class="city-wrap top-in">
+        <view class="city-title">选择城市
+            <navigator url="../logs/logs"
+            class="close">×</navigator>
+        </view>
+        <view class="city-list">
+            <view class="city-category" id="当前">
+                <view>当前</view>
+                <ul>
+                    <li>
+                        <a>佛山</a>
+                    </li>
+                </ul>
+            </view>
+            <view class="city-category" id="热门">
+                <view>热门</view>
+                <ul>
+                    <li>
+                        <a>北京</a>
+                    </li>
+                </ul>
+            </view>
+            <view class="city-category" id="A">
+                <view>A</view>
+                <ul>
+                    <li>
+                        <a>阿克苏</a>
+                    </li>
+                    <li>
+                        <a>阿克苏</a>
+                    </li>
+                    <li>
+                        <a>阿克苏</a>
+                    </li>
+                    <li>
+                        <a>阿克苏</a>
+                    </li>
+                </ul>
+            </view>
+            <view class="city-category" id="B">
+                <view>A</view>
+                <ul>
+                    <li>
+                        <a>阿克苏</a>
+                    </li>
+                    <li>
+                        <a>阿克苏</a>
+                    </li>
+                    <li>
+                        <a>阿克苏</a>
+                    </li>
+                    <li>
+                        <a>阿克苏</a>
+                    </li>
+                </ul>
+            </view>
+            <view class="city-category" id="C">
+                <view>A</view>
+                <ul>
+                    <li>
+                        <a>阿克苏</a>
+                    </li>
+                    <li>
+                        <a>阿克苏</a>
+                    </li>
+                    <li>
+                        <a>阿克苏</a>
+                    </li>
+                    <li>
+                        <a>阿克苏</a>
+                    </li>
+                </ul>
+            </view>
+        </view>
+        <view class="city-index left-in">
+            <ul>
+                <li>
+                    <a href="#当前">当前</a>
+                </li>
+            </ul>
+            <ul>
+                <li>
+                    <a href="#热门">热门</a>
+                </li>
+            </ul>
+            <ul>
+                <li>
+                    <a href="#A">A</a>
+                </li>
+            </ul>
+            <ul>
+                <li>
+                    <a href="#">B</a>
+                </li>
+            </ul>
+            <ul>
+                <li>
+                    <a href="#">C</a>
+                </li>
+            </ul>
+            <ul>
+                <li>
+                    <a href="#">D</a>
+                </li>
+            </ul>
+            <ul>
+                <li>
+                    <a href="#">当前</a>
+                </li>
+            </ul>
+            <ul>
+                <li>
+                    <a href="#">热门</a>
+                </li>
+            </ul>
+            <ul>
+                <li>
+                    <a href="#">A</a>
+                </li>
+            </ul>
+            <ul>
+                <li>
+                    <a href="#">B</a>
+                </li>
+            </ul>
+            <ul>
+                <li>
+                    <a href="#">C</a>
+                </li>
+            </ul>
+            <ul>
+                <li>
+                    <a href="#">D</a>
+                </li>
+            </ul>
+            <ul>
+                <li>
+                    <a href="#">当前</a>
+                </li>
+            </ul>
+            <ul>
+                <li>
+                    <a href="#">热门</a>
+                </li>
+            </ul>
+            <ul>
+                <li>
+                    <a href="#">A</a>
+                </li>
+            </ul>
+            <ul>
+                <li>
+                    <a href="#">B</a>
+                </li>
+            </ul>
+            <ul>
+                <li>
+                    <a href="#">C</a>
+                </li>
+            </ul>
+            <ul>
+                <li>
+                    <a href="#">D</a>
+                </li>
+            </ul>
+        </view>
+    </view>
+</template>
