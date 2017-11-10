@@ -28,130 +28,130 @@
 
 # 目录结构
 
-│  app.js
-│  app.json
-│  app.wxss
-│  list.txt
-│  project.config.json
-│  README.md
-│  video.gif
-|  server
-│  
-├─component
-│  ├─home
-│  │  ├─city
-│  │  │      city.js
-│  │  │      city.json
-│  │  │      city.wxml
-│  │  │      city.wxss
-│  │  │      
-│  │  ├─coming
-│  │  │      coming.wxml
-│  │  │      coming.wxss
-│  │  │      
-│  │  ├─hot
-│  │  │      hot.js
-│  │  │      hot.wxml
-│  │  │      hot.wxss
-│  │  │      
-│  │  ├─swiper
-│  │  │      swiper.js
-│  │  │      swiper.wxml
-│  │  │      swiper.wxss
-│  │  │      
-│  │  └─video
-│  │          video.js
-│  │          video.wxml
-│  │          video.wxss
-│  │          
-│  ├─login
-│  │      login.js
-│  │      login.wxml
-│  │      login.wxss
-│  │      
-│  └─login-pannel
-│          login-pannel.js
-│          login-pannel.json
-│          login-pannel.wxml
-│          login-pannel.wxss
-│          
-├─images
-│      3DIMAX.png
-│      film.png
-│      film1.png
-│      home.png
-│      img_1.jpg
-│      img_2.jpg
-│      img_3.jpg
-│      item_1.jpg
-│      loading.gif
-│      logo.png
-│      me.png
-│      me1.png
-│      movie.png
-│      movie1.png
-│      player.png
-│      start.png
-│      
-├─pages
-│  ├─Cinema
-│  │      Cinema.js
-│  │      Cinema.json
-│  │      Cinema.wxml
-│  │      Cinema.wxss
-│  │      
-│  ├─home
-│  │  ├─coming
-│  │  ├─MovieDetail
-│  │  │      MovieDetail.js
-│  │  │      MovieDetail.json
-│  │  │      MovieDetail.wxml
-│  │  │      MovieDetail.wxss
-│  │  │      
-│  │  └─will
-│  │          will.js
-│  │          will.json
-│  │          will.wxml
-│  │          will.wxss
-│  │          
-│  ├─id
-│  │      id.js
-│  │      id.json
-│  │      id.wxml
-│  │      id.wxss
-│  │      
-│  ├─index
-│  │      index.js
-│  │      index.json
-│  │      index.wxml
-│  │      index.wxss
-│  │      
-│  ├─loading
-│  │      loading.js
-│  │      loading.wxml
-│  │      loading.wxss
-│  │      
-│  ├─loadmore
-│  │      loadmore.js
-│  │      loadmore.wxml
-│  │      loadmore.wxss
-│  │      
-│  ├─logs
-│  │      logs.js
-│  │      logs.json
-│  │      logs.wxml
-│  │      logs.wxss
-│  │      
-│  ├─user
-│  │      user.js
-│  │      user.json
-│  │      user.wxml
-│  │      user.wxss
-│  │      
-│  └─video
-│          video.js
-│          video.json
-│          video.wxml
-│          video.wxss
+    │  app.js
+    │  app.json
+    │  app.wxss
+    │  list.txt
+    │  project.config.json
+    │  README.md
+    │  video.gif
+    |  server
+    │  
+    ├─component
+    │  ├─home
+    │  │  ├─city
+    │  │  │      city.js
+    │  │  │      city.json
+    │  │  │      city.wxml
+    │  │  │      city.wxss
+    │  │  │      
+    │  │  ├─coming
+    │  │  │      coming.wxml
+    │  │  │      coming.wxss
+    │  │  │      
+    │  │  ├─hot
+    │  │  │      hot.js
+    │  │  │      hot.wxml
+    │  │  │      hot.wxss
+    │  │  │      
+    │  │  ├─swiper
+    │  │  │      swiper.js
+    │  │  │      swiper.wxml
+    │  │  │      swiper.wxss
+    │  │  │      
+    │  │  └─video
+    │  │          video.js
+    │  │          video.wxml
+    │  │          video.wxss
+    │  │          
+    │  ├─login
+    │  │      login.js
+    │  │      login.wxml
+    │  │      login.wxss
+    │  │      
+    │  └─login-pannel
+    │          login-pannel.js
+    │          login-pannel.json
+    │          login-pannel.wxml
+    │          login-pannel.wxss
+    │          
+    ├─images
+    │      3DIMAX.png
+    │      film.png
+    │      film1.png
+    │      home.png
+    │      img_1.jpg
+    │      img_2.jpg
+    │      img_3.jpg
+    │      item_1.jpg
+    │      loading.gif
+    │      logo.png
+    │      me.png
+    │      me1.png
+    │      movie.png
+    │      movie1.png
+    │      player.png
+    │      start.png
+    │      
+    ├─pages
+    │  ├─Cinema
+    │  │      Cinema.js
+    │  │      Cinema.json
+    │  │      Cinema.wxml
+    │  │      Cinema.wxss
+    │  │      
+    │  ├─home
+    │  │  ├─coming
+    │  │  ├─MovieDetail
+    │  │  │      MovieDetail.js
+    │  │  │      MovieDetail.json
+    │  │  │      MovieDetail.wxml
+    │  │  │      MovieDetail.wxss
+    │  │  │      
+    │  │  └─will
+    │  │          will.js
+    │  │          will.json
+    │  │          will.wxml
+    │  │          will.wxss
+    │  │          
+    │  ├─id
+    │  │      id.js
+    │  │      id.json
+    │  │      id.wxml
+    │  │      id.wxss
+    │  │      
+    │  ├─index
+    │  │      index.js
+    │  │      index.json
+    │  │      index.wxml
+    │  │      index.wxss
+    │  │      
+    │  ├─loading
+    │  │      loading.js
+    │  │      loading.wxml
+    │  │      loading.wxss
+    │  │      
+    │  ├─loadmore
+    │  │      loadmore.js
+    │  │      loadmore.wxml
+    │  │      loadmore.wxss
+    │  │      
+    │  ├─logs
+    │  │      logs.js
+    │  │      logs.json
+    │  │      logs.wxml
+    │  │      logs.wxss
+    │  │      
+    │  ├─user
+    │  │      user.js
+    │  │      user.json
+    │  │      user.wxml
+    │  │      user.wxss
+    │  │      
+    │  └─video
+    │          video.js
+    │          video.json
+    │          video.wxml
+    │          video.wxss
 
 
